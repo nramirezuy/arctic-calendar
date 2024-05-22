@@ -7,7 +7,7 @@ Because, why not? :relaxed:
 
 ## Roadmap
 
-- [ ] Design initial data schemas
+- [x] Design initial data schemas
 - [ ] Load a single note from cli
 - [ ] Make notes persistent
 - [ ] List notes to cli
@@ -30,8 +30,7 @@ an issue with the tag "enhancement".
 
 Things to keep in mind:
 
-* We use pre-commit, so don't forget to run `pre-commit install`
-
+- We use pre-commit, so don't forget to run `pre-commit install`
 
 [open-issues]: https://github.com/othneildrew/Best-README-Template/issues
 [polars]: https://pola.rs/

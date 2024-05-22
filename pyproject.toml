@@ -13,6 +13,8 @@ arctic-calendar = "arctic_calendar.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+polars = "^0.20.28"
+patito = "^0.6.1"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.2.1"
