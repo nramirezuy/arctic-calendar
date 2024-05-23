@@ -26,7 +26,7 @@ arctic-calendar add mynotes.csv
 
 - [x] Design initial data schemas
 - [x] Load a single note from cli
-- [ ] Make notes persistent
+- [x] Make notes persistent
 - [ ] List notes to cli
 - [x] Read notes from stdin
 - [ ] Filter notes to cli
