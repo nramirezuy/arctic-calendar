@@ -31,7 +31,7 @@ arctic-calendar add appointments.csv
 - [x] Make appointments persistent
 - [x] List appointments to cli
 - [x] Read appointments from stdin
-- [ ] Filter appointments to cli
+- [x] Filter appointments to cli
 - [ ] What next?
 
 See the [open issues][open-issues] for a full list of

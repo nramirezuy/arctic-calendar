@@ -22,3 +22,21 @@ def add(input_file, database):
 
     appointments.write_ipc(database)
     appointments.glimpse()
+
+
+def where(after, before, database):
+    appointments = polars.scan_ipc(database)
+    appointments = appointments.filter(
+        (polars.col("start_time") >= after)
+        & (polars.col("end_time") <= before)
+    )
+
+    total = appointments.select(polars.len()).collect().item()
+    print(f"Total: {total}\n--------------------------------")
+    for row in appointments.collect().rows():
+        title, description, start_time, end_time = row
+        print(
+            f"Title: {title}\nStart: {start_time}\n"
+            f"End: {end_time}\nDescription: {description or ''}\n"
+            "--------------------------------"
+        )
