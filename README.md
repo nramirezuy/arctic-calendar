@@ -5,13 +5,30 @@
 This is a Calendar/Diary application built on top of [polars][polars].
 Because, why not? :relaxed:
 
+## Usage
+
+Adding a single note can be done with HereDoc, supported format is csv
+without headers. Dates have to be parsable by [polars][polars].
+
+```sh
+arctic-calendar add << EOF
+title,description,start-time,end-time
+EOF
+```
+
+Or you could point to a file:
+
+```sh
+arctic-calendar add mynotes.csv
+```
+
 ## Roadmap
 
 - [x] Design initial data schemas
-- [ ] Load a single note from cli
+- [x] Load a single note from cli
 - [ ] Make notes persistent
 - [ ] List notes to cli
-- [ ] Read notes from stdin
+- [x] Read notes from stdin
 - [ ] Filter notes to cli
 - [ ] What next?
 
