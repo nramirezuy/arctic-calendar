@@ -2,12 +2,14 @@
 
 ## About
 
-This is a Calendar/Diary application built on top of [polars][polars].
+This is a Calendar/Diary application for appointments
+built on top of [Polars][polars] and [Apache Feather][apache-feather].
+
 Because, why not? :relaxed:
 
 ## Usage
 
-Adding a single note can be done with HereDoc, supported format is csv
+Adding a single appointment can be done with HereDoc, supported format is csv
 without headers. Dates have to be parsable by [polars][polars].
 
 ```sh
@@ -19,17 +21,17 @@ EOF
 Or you could point to a file:
 
 ```sh
-arctic-calendar add mynotes.csv
+arctic-calendar add appointments.csv
 ```
 
 ## Roadmap
 
 - [x] Design initial data schemas
-- [x] Load a single note from cli
-- [x] Make notes persistent
-- [ ] List notes to cli
-- [x] Read notes from stdin
-- [ ] Filter notes to cli
+- [x] Load a single appointment from cli
+- [x] Make appointments persistent
+- [x] List appointments to cli
+- [x] Read appointments from stdin
+- [ ] Filter appointments to cli
 - [ ] What next?
 
 See the [open issues][open-issues] for a full list of
@@ -49,5 +51,6 @@ Things to keep in mind:
 
 - We use pre-commit, so don't forget to run `pre-commit install`
 
+[apache-feather]: https://arrow.apache.org/docs/python/feather.html
 [open-issues]: https://github.com/othneildrew/Best-README-Template/issues
 [polars]: https://pola.rs/

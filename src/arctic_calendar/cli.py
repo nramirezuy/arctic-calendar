@@ -2,7 +2,7 @@ import argparse
 import sys
 import tempfile
 
-from arctic_calendar import notes
+from arctic_calendar import appointments
 
 
 def parse_arguments():
@@ -29,6 +29,6 @@ def parse_arguments():
 def run_with_arguments(arguments):
     match arguments.command:
         case "add":
-            notes.add(arguments.infile, arguments.database)
+            appointments.add(arguments.infile, arguments.database)
         case _:
             raise ValueError(f"Unknown command: {arguments.command!r}")

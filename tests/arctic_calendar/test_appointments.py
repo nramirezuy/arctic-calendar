@@ -1,13 +1,13 @@
 import csv
 import datetime
 
-from arctic_calendar.models import Note
-from arctic_calendar.notes import add
+from arctic_calendar.appointments import add
+from arctic_calendar.models import Appointment
 
 
 def test_add__from_nothing(tmpdir, capsys):
     test_file = tmpdir.join("test.csv")
-    df = Note.examples(data={"title": ["a", "b", "c"]})
+    df = Appointment.examples(data={"title": ["a", "b", "c"]})
 
     def encode(row):
         return [
@@ -29,7 +29,7 @@ def test_add__from_nothing(tmpdir, capsys):
 
 def test_add__persistency(tmpdir, capsys):
     test_file = tmpdir.join("test.csv")
-    df = Note.examples(data={"title": ["a", "b", "c"]})
+    df = Appointment.examples(data={"title": ["a", "b", "c"]})
 
     def encode(row):
         return [

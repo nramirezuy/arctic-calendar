@@ -4,7 +4,7 @@ import patito
 import polars
 
 
-class Note(patito.Model):
+class Appointment(patito.Model):
     title: str = patito.Field(
         constraints=polars.col("title").is_not_null(),
         dtype=polars.String(),
