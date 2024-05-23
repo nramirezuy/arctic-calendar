@@ -10,7 +10,7 @@ Because, why not? :relaxed:
 ## Usage
 
 Adding a single appointment can be done with HereDoc, supported format is csv
-without headers. Dates have to be parsable by [polars][polars].
+without headers. Dates have to be parsable by [Polars][polars].
 
 ```sh
 arctic-calendar add << EOF
@@ -22,6 +22,16 @@ Or you could point to a file:
 
 ```sh
 arctic-calendar add appointments.csv
+```
+
+For persistency check the `--database` argument.
+
+To get the appointments out you can use:
+
+```sh
+arctic-calendar where \
+    --after $(LC_ALL=enUS-utf8 date --date "3 days ago" --iso-8601) \
+    --before $(LC_ALL=enUS-utf8 date --date "3 days" --iso-8601)
 ```
 
 ## Roadmap
